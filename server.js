@@ -22,7 +22,7 @@ function firstPrompt() {
         type: "list",
         name: "task",
         message: "What would you like to do?",
-        choices: ["View All Departments", "View All Roles","View All Employees", "Add Department", "Add Role", "Add Employee", "Update Employee Role"]
+        choices: ["View All Departments", "View All Roles","View All Employees", "Add Department", "Add Role", "Add Employee", "Update Employee Role", "Update Employee Manager"]
     })
     .then(answers => {
         console.log(answers.task);
@@ -47,6 +47,9 @@ function firstPrompt() {
                 break;
             case "Update Employee Role":
                 updateEmployeeRole();
+                break;
+            case "Update Employee Manager":
+                updateEmployeeManager();
                 break;
             default:
                 connection.end()
@@ -182,7 +185,7 @@ function updateEmployeeManager() {
             message: "Which employee would you like to update? (first name only)",
         },
         {
-            type: "number",
+            type: "input",
             name: "manager_id",
             message: "Enter new manager ID:"
         }
