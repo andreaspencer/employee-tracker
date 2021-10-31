@@ -31,6 +31,7 @@ Build a command-line application that accepts user input. The application can vi
     - once opened open terminal in VS code npm start
 
 ##### Video
+https://watch.screencastify.com/v/rBOOSG21girg5VaMVvT8
 
 ##### Github Link
 https://github.com/andreaspencer/employee-tracker
